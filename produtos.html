@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - PetShop Animale</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo principal</a>
+<!-- Sticky-top para a barra ficar fixa ao rolar a pagina -->
+<header class="sticky-top shadow-sm">
+    <!-- Uso do navbar do bootstrap -->
+    <!-- bg-primary-gradiente criado no meu css -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-gradient">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🐾 PetShop Animale</a>
+            <!-- data-bs: instrucao para o javascript encontrar o elemento #menuProdutos e mostrar ou esconder ele -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuProdutos">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menuProdutos" class="collapse navbar-collapse">
+                <!-- Menu á Esquerda, alinhamento atraves do bootstrap  -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#quem-somos">Quem somos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                </ul>
+                <!-- Direita: Login/Cadastro -->
+                <a href="cadastro.html" class="btn btn-outline-light d-flex align-items-center">
+                    <span class="me-2">👤</span>
+                    <span>Login / Cadastro</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="conteudo" class="py-5">
+    <div class="container">
+        <h1 class="mb-4">Nossos produtos</h1>
+        <p class="text-muted mb-5">
+            Confira alguns dos produtos disponíveis na PetShop Animale. Temos uma grande variedade
+            de itens para alimentação, conforto, higiene e diversão do seu pet.
+        </p>
+
+        <!-- Acessórios -->
+        <section class="mb-5">
+            <h2 class="mb-3 section-title">Acessórios</h2>
+            <div class="row g-4">
+                <article class="col-md-6">
+                    <!-- product-card: stilo criado no css para dar um efeito de levantar -->
+                    <div class="card product-card h-100">
+                        <img src="img/foto1.jpeg" class="card-img-top"
+                             alt="Cama aconchegante para cachorro">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Cama Aconchegante Super Macia (Tamanho M)</h3>
+                            <p class="card-text">
+                                Cama ultra macia, com enchimento confortável e base antiderrapante,
+                                ideal para cães de pequeno e médio porte.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 149,90</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="img/foto2.jpg" class="card-img-top"
+                             alt="Brinquedo mordedor de corda para cães">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Brinquedo Mordedor de Corda Resistente</h3>
+                            <p class="card-text">
+                                Ideal para brincadeiras de puxa-puxa, ajudando também na limpeza dos dentes.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 45,50</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Rações -->
+        <section class="mb-5">
+            <h2 class="mb-3 section-title">Rações não perecíveis</h2>
+            <div class="row g-4">
+                <article class="col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="img/foto3.jpeg" class="card-img-top"
+                             alt="Ração para cães adultos raças médias">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Ração Premium Cães Adultos Raças Médias (10kg)</h3>
+                            <p class="card-text">
+                                Fórmula completa com proteínas de alta qualidade e vitaminas essenciais.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 189,90</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="img/foto4.jpeg" class="card-img-top"
+                             alt="Ração para gatos castrados sabor salmão">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Ração Premium Gatos Castrados Sabor Salmão (3kg)</h3>
+                            <p class="card-text">
+                                Auxilia no controle de peso e na saúde urinária dos felinos castrados.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 99,90</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Higiene -->
+        <section class="mb-3">
+            <h2 class="mb-3 section-title">Higiene e limpeza</h2>
+            <div class="row g-4">
+                <article class="col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="img/foto5.jpeg" class="card-img-top"
+                             alt="Tapete higiênico para cães">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Tapete Higiênico Super Absorvente (30 unidades)</h3>
+                            <p class="card-text">
+                                Tapetes com gel super absorvente e atrativo canino, mantendo sua casa sempre limpa.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 65,00</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="img/foto6.jpg" class="card-img-top"
+                             alt="Fraldas descartáveis para cães machos">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Fralda Descartável Macho (12 unidades)</h3>
+                            <p class="card-text">
+                                Ideal para passeios, viagens e pós-operatório, com ótima fixação e conforto.
+                            </p>
+                            <p class="card-text fw-bold text-primary">R$ 42,00</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Rodapé do site -->
+<footer class="bg-dark text-white py-3 mt-4">
+    <div class="container small">
+        <p class="mb-0">© 2025 PetShop Animale.</p>
+    </div>
+</footer>
+<!-- Bootstrap JS (bundle com Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

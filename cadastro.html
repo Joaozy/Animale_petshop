@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Content para se adpatar a diferentes tipos de dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - PetShop Animale</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- HEADER / NAVBAR -->
+<!-- Sticky-top para a barra ficar fixa ao rolar a pagina -->
+<header class="sticky-top shadow-sm">
+    <!-- Uso do navbar do bootstrap -->
+    <!-- bg-primary-gradiente criado no meu css -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-gradient">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🐾 PetShop Animale</a>
+            <!-- data-bs: instrucao para o javascript encontrar o elemento #menuCadastro e mostrar ou esconder ele -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuCadastro">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menuCadastro" class="collapse navbar-collapse">
+                <!-- Menu á Esquerda, alinhamento atraves do bootstrap  -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="py-5">
+    <div class="container">
+        <h1 class="mb-3">Cadastro do cliente e do pet</h1>
+        <p class="text-muted mb-4">
+            Preencha os dados abaixo para realizar o cadastro. Depois você poderá fazer o agendamento do banho e tosa.
+        </p>
+        <!-- novalidate para informar ao navegador para nao fazer validacao de dados. O JavaScript ja vai fazer isso -->
+        <form id="form-cadastro" class="row g-4" novalidate>
+            <!-- Dados do Cliente -->
+            <fieldset class="col-md-6">
+                <legend>Dados do Cliente</legend>
+                    <div class="mb-3">
+                        <!-- uso do required para tornar alguns campos obrigatorio o preenchimento -->
+                        <label for="nomeCliente" class="form-label">Nome completo *</label>
+                        <input type="text" id="nomeCliente" name="nomeCliente" class="form-control"
+                            placeholder="Ex.: Ana Souza" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="endereco" class="form-label">Endereço *</label>
+                        <input type="text" id="endereco" name="endereco" class="form-control"
+                            placeholder="Rua, número, bairro" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cpf" class="form-label">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" class="form-control"
+                            placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <span class="form-label d-block mb-1">Sexo *</span>
+                        <!-- Uso do Radio para selecionar entre feminino e masculino -->
+                        <!-- campo name com o mesmo identificador para que só possa selecionar um campo -->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="Feminino" required>
+                            <label class="form-check-label" for="sexoF">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="Masculino" required>
+                            <label class="form-check-label" for="sexoM">Masculino</label>
+                        </div>
+                    </div>
+                    <!-- Campo de Telefone -->
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control"
+                            placeholder="(99) 99999-9999" required>
+                    </div>
+                    <!-- Campo de Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail *</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <!-- CAMPO SENHA -->
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha *</label>
+                        <input type="password" id="senha" name="senha" class="form-control"
+                            placeholder="Crie uma senha" required>
+                    </div>
+                    <!-- Um campo para Envio de Promocoes respeitando o LGPD -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="promocoes" name="promocoes">
+                        <label class="form-check-label" for="promocoes">
+                            Desejo receber promoções por e-mail.
+                        </label>
+                    </div>
+            </fieldset>
+
+            <!-- Dados do Pet -->
+            <fieldset class="col-md-6">
+                <legend>Dados do Pet</legend>
+
+                <div class="mb-3">
+                    <label for="nomePet" class="form-label">Nome do Pet *</label>
+                    <input type="text" id="nomePet" name="nomePet" class="form-control"
+                           placeholder="Ex.: Rex, Nina" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="raca" class="form-label">Raça *</label>
+                    <input type="text" id="raca" name="raca" class="form-control"
+                           placeholder="Ex.: Shih Tzu, SRD" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="idade" class="form-label">Idade (anos) *</label>
+                    <input type="number" id="idade" name="idade" class="form-control"
+                           min="0" max="30" placeholder="Ex.: 3" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="observacoes" class="form-label">Observações</label>
+                    <textarea id="observacoes" name="observacoes" class="form-control" rows="3"
+                              placeholder="Alergias, comportamento especial, etc."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="col-12">
+                <p class="small text-muted">Os campos marcados com * são obrigatórios.</p>
+                <button type="submit" class="btn btn-success">Salvar cadastro</button>
+            </div>
+        </form>
+
+        <div id="mensagem-cadastro" class="alert alert-success mt-3 d-none" role="status"></div>
+    </div>
+</main>
+<!-- Rodapé do site -->
+<footer class="bg-dark text-white py-3 mt-4">
+    <div class="container small">
+        <p class="mb-0">© 2025 PetShop Animale.</p>
+    </div>
+</footer>
+<!-- Bootstrap JS (bundle com Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>
